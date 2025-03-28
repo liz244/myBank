@@ -13,7 +13,7 @@ const HomePage = () => {
 
       <div className="contenu">
         <h1>Welcome</h1>
-        <p>Easily manage your expenses.</p>
+        <p>Manage your expenses.</p>
         <button onClick={() => navigate("/expense")}>Let's go</button>
       </div>
     </div>

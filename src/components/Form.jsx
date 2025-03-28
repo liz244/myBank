@@ -12,7 +12,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!amount || !category) {
-      setError("Veuillez remplir tous les champs.");
+      setError("Please fill in all fields");
       return;
     }
   
