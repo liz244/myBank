@@ -15,11 +15,24 @@ const Form = () => {
       setError("Veuillez remplir tous les champs.");
       return;
     }
-
+  
+    const newExpense = {
+      id: Date.now(),
+      amount: parseFloat(amount),
+      category,
+    };
+  
+    const saved = localStorage.getItem("mybank-expenses");
+    const existing = saved ? JSON.parse(saved) : [];
+  
+    const updated = [...existing, newExpense];
+    localStorage.setItem("mybank-expenses", JSON.stringify(updated));
+  
     setAmount("");
     setCategory("");
     navigate("/expenses");
   };
+  
 
   return (
     <div className="form-container">

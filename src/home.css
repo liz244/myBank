@@ -8,7 +8,8 @@
   text-align: center;
   color: #fff;
 }
-.video {
+
+.home .video {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -17,24 +18,29 @@
   left: 0;
   z-index: -1;
 }
-.contenu {
+
+.home .contenu {
   position: relative;
   z-index: 1;
 }
-h1 {
+
+.home h1 {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 15px;
 }
-p {
+
+.home p {
   font-size: 1.2rem;
 }
-button {
+
+.home button {
   background: rgba(212, 135, 135, 0.85);
   color: #222;
   padding: 10px 20px;
   font-size: 1rem;
   margin-top: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
-
-

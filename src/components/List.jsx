@@ -1,33 +1,43 @@
-// src/components/List.jsx
-import React, { useContext } from "react";
-import { ExpenseContext } from "../context/ExpenseContext";
+import React from "react";
 
-const List = ({ filter }) => {
-  const { expenses, removeExpense } = useContext(ExpenseContext);
-
-  // Appliquer le filtre si spécifié
-  const filteredExpenses = filter
-    ? expenses.filter((expense) => expense.category === filter)
-    : expenses;
+const List = ({ expenses, onDelete }) => {
+  if (expenses.length === 0) {
+    return <p>No expenses found.</p>;
+  }
 
   return (
-    <div className="list-container">
-      <h2>Expenses List</h2>
-      {filteredExpenses.length === 0 ? (
-        <p>No expenses found.</p>
-      ) : (
-        <ul>
-          {filteredExpenses.map((expense) => (
-            <li key={expense.id}>
-              <span>
-                {expense.category} - {expense.amount}€
-              </span>
-              <button onClick={() => removeExpense(expense.id)}>Delete</button>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
+    <ul style={{ paddingLeft: 0 }}>
+      {expenses.map((item) => (
+        <li
+          key={item.id}
+          style={{
+            listStyle: "none",
+            padding: "8px",
+            borderBottom: "1px solid #eee",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center"
+          }}
+        >
+          <span>
+            {item.amount}€ — {item.category}
+          </span>
+          <button
+            onClick={() => onDelete(item.id)}
+            style={{
+              background: "red",
+              color: "white",
+              border: "none",
+              padding: "5px 10px",
+              cursor: "pointer",
+              borderRadius: "4px"
+            }}
+          >
+            Delete
+          </button>
+        </li>
+      ))}
+    </ul>
   );
 };
 
