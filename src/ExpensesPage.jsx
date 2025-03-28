@@ -23,6 +23,9 @@ const ExpensesPage = () => {
     ? expenses.filter((e) => e.category === selectedCategory)
     : expenses;
 
+    const totalAmount = filteredExpenses.reduce((acc, exp) => acc + exp.amount, 0);
+
+
   return (
     <div style={{ maxWidth: "600px", margin: "40px auto" }}>
       <h2>My Expenses</h2>
@@ -31,7 +34,13 @@ const ExpensesPage = () => {
         setSelectedCategory={setSelectedCategory}
       />
       <List expenses={filteredExpenses} onDelete={handleDelete} />
+
+      <div className="total">
+  Total: {totalAmount.toFixed(2)} €
+</div>
+
     </div>
+    
   );
 };
 

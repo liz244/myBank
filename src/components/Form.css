@@ -1,67 +1,75 @@
-
 .form-container {
-    height: 100vh;
-    width: 100vw;
-    padding: 40px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    font-family: sans-serif;
-  }
-  
+  height: 100vh;
+  width: 100vw;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  font-family: "Cormorant SC", serif;
+  position : center;
+}
 
-  .form-container h2 {
-    font-size: 42px;
-    margin-bottom: 40px;
-    color: #111;
-  }
-  
- 
-  .form-container form {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-  }
-  
-  
-  .form-container label {
-    font-size: 20px;
-    margin-bottom: 8px;
-  }
-  
-  
-  .form-container input,
-  .form-container select {
-    width: 100%;
-    padding: 20px;
-    font-size: 20px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    margin-bottom: 30px;
-    box-sizing: border-box;
-  }
-  
 
-  .form-container button {
-    padding: 20px;
-    font-size: 22px;
-    background-color: #ff2e2e;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .form-container button:hover {
-    background-color: #c60000;
-  }
-  
-  .form-container .error {
-    color: red;
-    font-size: 16px;
-    margin-bottom: 15px;
-  }
-  
+.form-container h2 {
+  font-size: 42px;
+  margin-bottom: 40px;
+  color: #111;
+  font-family: "Cormorant SC", serif;
+}
+
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+
+.form-container label {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+
+.form-container button {
+  padding: 20px;
+  font-size: 22px;
+  background-color: #2eff6d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #00c687;
+}
+
+.form-container .error {
+  color: red;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+
+.total {
+  margin-top: 30px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: right;
+}

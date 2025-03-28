@@ -36,7 +36,7 @@ const Form = () => {
 
   return (
     <div className="form-container">
-      <h2>Add an expense</h2>
+      <h2>Let’s log your next spending</h2>
       {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit}>
         <div>
@@ -48,7 +48,7 @@ const Form = () => {
           />
         </div>
         <div>
-          <label>Catégory</label>
+          <label>Category</label>
           <select value={category} onChange={(e) => setCategory(e.target.value)}>
             <option value="">Choose a category</option>
             <option value="Food">Food</option>

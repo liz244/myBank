@@ -12,9 +12,9 @@ const HomePage = () => {
       </video>
 
       <div className="contenu">
-        <h1>Welcome</h1>
-        <p>Manage your expenses.</p>
-        <button onClick={() => navigate("/expense")}>Let's go</button>
+        <h1>Smart money management</h1>
+        <p>Track your expenses and stay on top of your budget.</p>
+        <button onClick={() => navigate("/expense")}>Start now</button>
       </div>
     </div>
   );
